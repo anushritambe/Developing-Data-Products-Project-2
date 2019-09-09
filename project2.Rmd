@@ -1,0 +1,24 @@
+---
+title: "Developing-Data-Products-Project-2"
+author: "Anushri Tambe"
+date: "09/09/2019"
+output:
+       ioslides_presentation: default
+---
+***
+Lets see some plots using plotly
+
+## Scatterplot
+
+```{r setup, echo=FALSE, comment=NA}
+suppressPackageStartupMessages(library(plotly))
+plot_ly(data.frame(mtcars), x= ~wt, y= ~mpg, mode="markers", type="scatter",color = as.factor(mtcars$cyl))
+```
+
+
+
+## Countinuous Colour Scatterplot 
+```{r, echo=FALSE}
+plot_ly(data.frame(mtcars), x= ~wt, y= ~mpg, mode="markers",type="scatter",color = mtcars$disp)
+```
+
